@@ -26,7 +26,7 @@ app.use("/user", usersRouter);
 app.use("/admin", adminRouter);
 // app.use('/categories', categoriesRouter);
 // app.use('/authors', authorsRouter);
-// app.use('/books', booksRouter);
+app.use("/books", booksRouter);
 
 // not found middleware
 app.use((req, res, next) => {

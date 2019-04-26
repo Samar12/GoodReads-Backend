@@ -26,7 +26,7 @@ router.post("/login", async function(req, res, next) {
 });
 router.use(authMiddleware);
 
-router.get("/dashboard", async function(req, res, next) {
+router.get("/dashboard", function(req, res, next) {
   console.log("admin home page here ...");
 });
 
