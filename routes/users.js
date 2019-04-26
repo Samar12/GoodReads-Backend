@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 const createError = require("http-errors");
 const userModel = require("../models//user");
-const bookModel = require("../models/book");
+const bookModel = require("../models/Book");
 const authMiddleware = require("../middlewares/User_Authentication");
 
 router.post("/register", async function(req, res, next) {

@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-const authMiddleware = require("./../middlewares/authentication");
+const authMiddleware = require("./../middlewares/admin_Authentication");
 const Author = require("../Models/AuthorModel");
 const createError = require("http-errors");
 

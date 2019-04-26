@@ -5,7 +5,7 @@ const validator = require("validator");
 const util = require("util");
 const jwtSignPromise = util.promisify(jwt.sign);
 const jwtVerifyPromise = util.promisify(jwt.verify);
-const bookModel = require("./book");
+const bookModel = require("./Book");
 
 const jwtKey = "secretKey";
 
