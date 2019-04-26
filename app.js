@@ -1,19 +1,19 @@
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 const cors = require("cors");
 // var indexRouter = require("./routes/index");
 const createError = require("http-errors");
 require("./db");
 
-var usersRouter = require("./routes/users");
-var adminRouter = require("./routes/admin");
-var authorsRouter = require("./routes/authors");
-var booksRouter = require("./routes/books");
-var categoriesRouter = require("./routes/categories");
+const usersRouter = require("./routes/users");
+const adminRouter = require("./routes/admin");
+const authorsRouter = require("./routes/authors");
+const booksRouter = require("./routes/books");
+const categoriesRouter = require("./routes/categories");
 
-var app = express();
+const app = express();
 
 app.use(cors());
 app.use(logger("dev"));
@@ -24,8 +24,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/user", usersRouter);
 app.use("/admin", adminRouter);
-// app.use('/categories', categoriesRouter);
-// app.use('/authors', authorsRouter);
+
+app.use("/categories", categoriesRouter);
+app.use("/authors", authorsRouter);
 app.use("/books", booksRouter);
 
 // not found middleware
