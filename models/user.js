@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema(
     },
     books: [
       {
-        bookId: { type: mongoose.Schema.Types.ObjectId, ref: "Book" }, // Using Population
+        bookId: { type: mongoose.Schema.Types.ObjectId, ref: "Books" }, // Using Population
         rating: { type: String, default: "0" },
         status: { type: String, lowercase: true, enum: ["want to read", "read", "currently reading"] }
       }
