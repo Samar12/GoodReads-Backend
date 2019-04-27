@@ -8,7 +8,7 @@ const AuthorSchema = new Schema({
     required: true,
     minlength: 3
   },
-  LastName: {
+  LastName: {  
     //index:{unique:true},
     type: String,
     required: true,

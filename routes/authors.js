@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const authMiddleware = require("./../middlewares/admin_Authentication");
-const Author = require("../Models/AuthorModel");
+const Author = require("../models/AuthorModel");
 const createError = require("http-errors");
 
 //-------------------------------------------GetAll----------------------------------------------------------//
@@ -30,10 +30,7 @@ router.post("/Add", function (req, res, next) {
 //-------------------------------------------Edit----------------------------------------------------------//
 
 router.patch("/:id/edit", async function (req, res, next) {
-    let author = await Author.findByIdAndUpdate(
-        { _id: req.params.id },
-        { $set: req.body },
-        { new: true },
+    let author = await Author.findByIdAndUpdate({ _id: req.params.id },{ $set: req.body },{ new: true },
         (err, doc) => {
             if (err) {
                 console.log("Something wrong when updating data!");
