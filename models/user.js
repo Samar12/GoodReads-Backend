@@ -15,19 +15,19 @@ const userSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, "name required"],
+      required: true,
       minlength: 3,
       match: /^[a-zA-Z ]+[a-zA-Z]$/
     },
     email: {
       type: String,
       validate: validator.isEmail,
-      unique: [true, "email must be unique"],
-      required: [true, "email required"]
+      unique: true,
+      required: true
     },
     password: {
       type: String,
-      required: [true, "password required"],
+      required: true,
       hidden: true
     },
     photo: {

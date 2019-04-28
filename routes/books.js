@@ -1,8 +1,7 @@
 var express = require("express");
-// const Book = require("./../models/book");
 const createError = require("http-errors");
 const CategoryModel = require("../models/Category");
-// const authorModel = require("../models/AuthorModel");
+
 var router = express.Router();
 
 /* GET books listing. */
