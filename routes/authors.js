@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const authMiddleware = require("./../middlewares/admin_Authentication");
-const Author = require("../Models/AuthorModel");
+const Author = require("../models/AuthorModel");
 const createError = require("http-errors");
 
 //--------------------------------------  Get Specific User  ---------------------------------------------------------------------

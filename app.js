@@ -25,8 +25,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/user", usersRouter);
 app.use("/admin", adminRouter);
 
-app.use("/categories", categoriesRouter);
-app.use("/authors", authorsRouter);
+app.use("/api/categories", categoriesRouter);
+app.use("/api/Authors", authorsRouter);
 app.use("/books", booksRouter);
 
 // not found middleware

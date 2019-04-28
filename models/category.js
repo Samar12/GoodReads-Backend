@@ -10,7 +10,8 @@ const categorySchema = new mongoose.Schema({
   },
   IsDeleted: {
     type: Boolean,
-    default: false
+    default: false,
+    required: false
   },
   books: {
     type: [
